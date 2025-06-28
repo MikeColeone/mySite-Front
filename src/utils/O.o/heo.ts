@@ -1,4 +1,4 @@
-import type{Oo} from './type';
+import {Oo} from './type';
 
 export const heo: Oo = {
     '[3d眼镜]': 'https://image.kuailemao.xyz/blog/emoji/heo/3d眼镜.png',

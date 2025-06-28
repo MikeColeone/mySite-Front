@@ -1,15 +1,15 @@
-import { config } from "../config/config";
+import { config } from "@/config/config";
 // 转码
 export const Base64 = {
-    encode: function (v: string | number | boolean) {
+    encode: function (v) {
         return window.btoa(window.encodeURIComponent(v));
     },
-    decode: function (v: string) {
+    decode: function (v) {
         return window.decodeURIComponent(window.atob(v));
     },
 };
 
-export const _setLocalItem = function (key: string | number | boolean | undefined, value: string | number | null | undefined) {
+export const _setLocalItem = function (key, value) {
     try {
         if (key === "" || key === undefined) {
             return;
@@ -24,7 +24,7 @@ export const _setLocalItem = function (key: string | number | boolean | undefine
                 return "";
             }
             // 编码
-            const enObj = JSON.stringify(value);
+            let enObj = JSON.stringify(value);
             if (config.ENCRYPTION) {
                 localStorage.setItem(Base64.encode(key), Base64.encode(enObj));
             } else {

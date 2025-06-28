@@ -1,7 +1,7 @@
-import http from "../../utils/http.ts";
+import http from "@/utils/http.ts";
 
 // 获取首页文章列表
-export function getArticleList(pageNum: number, pageSize: Number) {
+export function getArticleList(pageNum: Number, pageSize: Number) {
     return http({
         url: '/article/list',
         method: 'get',

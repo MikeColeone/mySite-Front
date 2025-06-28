@@ -1,4 +1,4 @@
-import type { Oo } from './type';
+import {Oo} from './type';
 
 export const emojis: Oo = {
     '[嘿嘿]': '😀',

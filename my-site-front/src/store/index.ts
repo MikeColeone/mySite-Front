@@ -1,12 +1,15 @@
-import create from 'zustand'
+import { createPinia } from "pinia";
+import piniaPluginPersistedstate from "pinia-plugin-persistedstate";
+import type { App } from "vue";
+import { resetSetupStore } from "./plugins";
 
-// 创建 Zustand store，类似 Pinia 实例
-const useStore = create((set) => ({
-  // 示例状态
-  count: 0,
-  // 示例方法，类似 Pinia actions
-  increment: () => set((state) => ({ count: state.count + 1 })),
-  reset: () => set({ count: 0 }),
-}))
 
-export default useStore
+/** setup vue store plugin: pinia. - [安装vue状态管理插件：pinia] */
+export function setupStore(app: App) {
+	const store = createPinia();
+	store.use(resetSetupStore);
+	store.use(piniaPluginPersistedstate);
+	app.use(store);
+}
+
+export * from "./modules";

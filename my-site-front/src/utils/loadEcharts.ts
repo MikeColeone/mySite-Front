@@ -4,7 +4,7 @@
 
 import { EChartsOption } from 'echarts';
 
-export const theme: EChartsOption = {
+export const myTheme: EChartsOption = {
   color: ['#2f89cf'],
   backgroundColor: '#fff',
   title: {
@@ -13,5 +13,6 @@ export const theme: EChartsOption = {
     },
   },
 };
+
 
 

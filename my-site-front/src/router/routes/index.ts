@@ -30,14 +30,7 @@ export const routes: RouteRecordRaw[] = [
 		path: "/tag/:tagId",
 		component: () => import("@/views/Tag/ArticleList.vue"),
 	},
-	{
-		name: "friend",
-		path: "/friend",
-		component: () => import("@/views/Friend/index.vue"),
-		meta: {
-			title: "友链",
-		},
-	},
+
 	{
 		path: "/archive",
 		component: () => import("@/views/Archive/index.vue"),

@@ -78,32 +78,7 @@ const menuList = [
       },
     ]
   },
-  {
-    name: "娱乐",
-    icon: "fun",
-    children: [
-      {
-        name: "说说",
-        icon: "talk",
-        path: "/talk"
-      },
-      {
-        name: "相册",
-        icon: "album",
-        path: "/album"
-      },
-      {
-        name: "图床",
-        icon: "upload",
-        path: "/picture"
-      },
-    ]
-  },
-  {
-    name: "友链",
-    icon: "friend",
-    path: "/friend"
-  },
+
   {
     name: "留言板",
     icon: "message",
